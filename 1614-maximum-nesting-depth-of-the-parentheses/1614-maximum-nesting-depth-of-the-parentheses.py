@@ -9,9 +9,9 @@ class Solution(object):
         for i in s:
             if i == "(":
                 stack.append("(")
+                m = max(m, len(stack))
             elif i == ")":
                 stack.pop()
-            m = max(m, len(stack))
             
         return m
         
